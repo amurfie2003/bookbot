@@ -28,3 +28,25 @@ def count_letters(search_list):
 
     return result
 
+#book report
+def book_report():
+    print()
+    print(f"---Result of {book_path} analysis---")
+    print(f"\t{word_count()} words found in the document")
+    
+    result = count_letters(search)
+    for key, value in result.items():
+        print(f"\tThe '{key}' character was found {value} times")
+    
+    print("---End Of Report---")
+    return 
+
+
+
+
+
+def main():
+    book_report()
+    return 
+
+main()
