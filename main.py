@@ -15,3 +15,16 @@ def word_count():
 
 
 
+#count each letter occurrence
+def count_letters(search_list):
+    result = {}
+    content = get_book_content(book_path)
+    for search in search_list:
+        count = 0
+        for i in range(0, len(content)):
+            if search == content[i].lower():
+                count += 1
+        result[search] = count
+
+    return result
+
